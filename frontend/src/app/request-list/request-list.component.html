@@ -15,7 +15,22 @@
         <td>{{ request.user }}</td>
         <td>{{ request.movie }}</td>
         <td>{{ request.collaborators }}</td>
-        <td>{{ request.progress }}</td>
+        <!-- <td>{{ request.progress }}</td> -->
+        <td>
+          <div class="progress-bar-container">
+            <div
+              class="progress-bar"
+              [style.width.%]="request.progress"
+              [ngClass]="{
+                low: request.progress < 30,
+                medium: request.progress >= 30 && request.progress < 70,
+                high: request.progress >= 70
+              }"
+            >
+              {{ request.progress }}%
+            </div>
+          </div>
+        </td>
         <td>
           <button class="btn btn-secondary" (click)="editRequest(request)">
             edit

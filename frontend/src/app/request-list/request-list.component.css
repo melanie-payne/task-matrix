@@ -1,0 +1,32 @@
+/* Add or modify these styles in your CSS file */
+.progress-bar-container {
+  width: 100px; /* Set a fixed width for the progress bar container */
+  height: 20px;
+  background-color: #f0f0f0;
+  margin-top: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  text-align: center;
+  line-height: 20px;
+  /* color: #fff; */
+  transition: width 0.3s ease;
+  /* border: 1px solid #464444; Thin border */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+/* Color variations based on progress */
+.progress-bar.low {
+  background-color: #ff6347; /* Red */
+}
+
+.progress-bar.medium {
+  background-color: #ffa500; /* Orange */
+}
+
+.progress-bar.high {
+  background-color: #00ff00; /* Green */
+}
