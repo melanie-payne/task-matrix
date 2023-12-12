@@ -1,0 +1,74 @@
+<div class="container mt-4">
+  <div class="card">
+    <form (ngSubmit)="submitRequest()" #requestForm="ngForm">
+      <h1 class="highlight">create a task</h1>
+      <div class="form-group">
+        <label for="requester">user</label>
+        <input
+          type="text"
+          id="requester"
+          name="requester"
+          [(ngModel)]="user"
+          required
+          pattern="[A-Za-z0-9]+"
+          class="form-control"
+          placeholder="enter user"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">task</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          [(ngModel)]="movie"
+          required
+          class="form-control"
+          placeholder="enter task"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">collaborators</label>
+        <input
+          type="text"
+          id="collaborators"
+          name="collaborators"
+          [(ngModel)]="collaborators"
+          required
+          class="form-control"
+          placeholder="enter collaborators"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">progress</label>
+        <input
+          type="number"
+          id="progress"
+          name="progress"
+          [(ngModel)]="progress"
+          required
+          class="form-control"
+          placeholder="enter progress"
+        />
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="!requestForm.valid"
+        class="btn btn-primary"
+      >
+        create task
+      </button>
+    </form>
+    <p class="disclaimer">
+      By submitting this task, you confirm and certify that the information
+      provided is accurate and complete. You understand that the task details
+      are subject to review and approval. Your request for task completion is
+      contingent upon availability and compliance with our platform's
+      guidelines. By submitting this task, you agree to adhere to the Terms of
+      Service and Privacy Policy of our platform. Please note that the
+      submission of this task does not guarantee its immediate completion or
+      inclusion in our task matrix.
+    </p>
+  </div>
+</div>

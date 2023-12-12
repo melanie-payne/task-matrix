@@ -1,0 +1,32 @@
+<h2>&nbsp;&nbsp;task list</h2>
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>user</th>
+        <th>task</th>
+        <th>collaborators</th>
+        <th>progress</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of requestList">
+        <td>{{ request.user }}</td>
+        <td>{{ request.movie }}</td>
+        <td>{{ request.collaborators }}</td>
+        <td>{{ request.progress }}</td>
+        <td>
+          <button class="btn btn-secondary" (click)="editRequest(request)">
+            edit
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-dark" (click)="deleteRequest(request.id)">
+            delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

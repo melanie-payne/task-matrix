@@ -1,0 +1,45 @@
+<!-- edit-task.component.html -->
+
+<div class="container mt-4">
+  <div class="card">
+    <form (ngSubmit)="submitEditedRequest()" #editForm="ngForm">
+      <h1 class="highlight">Edit Request</h1>
+      <div class="form-group">
+        <label for="requester">Requester Name</label>
+        <!-- <input
+          type="text"
+          id="requester"
+          name="requester"
+          [(ngModel)]="user"
+          required
+          pattern="[A-Za-z0-9]+"
+          class="form-control"
+          placeholder="Enter requester name"
+        /> -->
+      </div>
+      <div class="form-group">
+        <label for="title">Movie</label>
+        <!-- <input
+          type="text"
+          id="title"
+          name="title"
+          [(ngModel)]="movie"
+          required
+          class="form-control"
+          placeholder="Enter title"
+        /> -->
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="!editForm.valid"
+        class="btn btn-primary"
+      >
+        Save Changes
+      </button>
+    </form>
+    <p class="disclaimer">
+      <!-- Your disclaimer text goes here -->
+    </p>
+  </div>
+</div>
